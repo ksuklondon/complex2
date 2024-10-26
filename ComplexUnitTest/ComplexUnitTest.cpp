@@ -41,7 +41,7 @@ namespace ComplexUnitTest
 			Complex c(-23.74, 134.89);
 			c.setImaginary(-529.23);
 			//TODO add a check that the value returned by the getImaginary method is correct
-			
+			Assert::AreEqual(-529.23, c.getImaginary(), 0.01);
 		}
 		TEST_METHOD(magnitudeZeroZero)
 		{
@@ -81,7 +81,8 @@ namespace ComplexUnitTest
 		TEST_METHOD(magnitudeIIIQuarter)
 		{
 			//TODO add a test implementation that verifies that the magnitude method returns the correct value for a complex number (-45.62, -92.17)
-			
+			Complex c(-45.62, -92.17);
+			Assert::AreEqual(102.84, c.magnitude(), 0.01);
 		}
 		TEST_METHOD(magnitudeVIQuarter)
 		{
