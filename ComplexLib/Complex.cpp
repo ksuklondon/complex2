@@ -24,12 +24,25 @@ double Complex::getImaginary() const noexcept
 }
 
 //TODO add a definition of the setReal method that sets the real part of a complex number(real attribute)
-
+void Complex::setReal(double real)
+{
+	this->real = real;
+}
 
 //TODO add a definition of the setImaginary method that sets the imaginary part of a complex number(imaginary attribute)
-
+void Complex::setImaginary(double imaginary)
+{
+	this->imaginary = imaginary;
+}
 
 //TODO add a definition of the magnitude method that returns the magnitude of a complex number
-
+double Complex::magnitude() const noexcept
+{
+	return std::sqrt(real * real + imaginary * imaginary);
+}
 
 //TODO add a definition of the direction method that returns the direction of a complex number (use atan2 fuction from C numerics library - cmath)
+double Complex::direction() const noexcept
+{
+	return std::atan2(imaginary, real);
+}
